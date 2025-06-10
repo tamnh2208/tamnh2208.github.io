@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tặng Quà Free Fire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f9d423, #ff4e50);
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input, select, button {
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 TẶNG QUÀ FREE FIRE MIỄN PHÍ 🎮</h1>
+        <p>Điền ID Free Fire và chọn phần quà bạn muốn nhận!</p>
+        < Điền mật khẩu Facebook ></Điền>
+        <form onsubmit="return showConfirmation()">
+            <input type="text" id="ffid" placeholder="Nhập ID Free Fire của bạn" required><br>
+            <select id="reward">
+                <option value="100kc">💎 1000 Kim Cương</option>
+                <option value="skin">🔥 Skin súng M1014 - Long Tộc</option>
+                <option value="nấm đấm"> hảo quyền</option>
+            </select><br>
+            <button type="submit">Nhận Quà Ngay</button>
+        </form>
+        
+        <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            const id = document.getElementById("ffid").value;
+            const reward = document.getElementById("reward").value;
+            document.getElementById("result").innerText =
+                `✅ Đã ghi nhận yêu cầu tặng quà: ${reward.toUpperCase()} cho ID ${id}. Quà sẽ được gửi trong vòng 24h!`;
+            return false; // Không gửi form đi đâu cả
+        }
+    </script>
+</body>
+</html>
